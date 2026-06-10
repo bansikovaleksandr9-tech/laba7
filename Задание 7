@@ -1,5 +1,5 @@
 def print_board(board):
-    """Вывод судоку"""
+   
     for i in range(12):
         if i % 3 == 0 and i != 0:
             print("-" * 37)
@@ -15,7 +15,7 @@ def print_board(board):
         print()
 
 def find_empty(board):
-    """Поиск пустой клетки"""
+    
     for i in range(12):
         for j in range(12):
             if board[i][j] == 0:
@@ -23,7 +23,7 @@ def find_empty(board):
     return None
 
 def is_valid(board, num, pos):
-    """Проверка правильности"""
+   
     
     for j in range(12):
         if board[pos[0]][j] == num and pos[1] != j:
@@ -45,7 +45,7 @@ def is_valid(board, num, pos):
     return True
 
 def solve(board):
-    """Решение судоку"""
+   
     find = find_empty(board)
     if not find:
         return True
